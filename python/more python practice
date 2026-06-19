@@ -1,0 +1,276 @@
+boys_1={"TATA","DADA","MAMA"}
+boys_2={"KOKO","TATA","CHOCHO"}
+boys_1 & boys_2
+{'TATA'}
+
+boys_1={"TATA","DADA","MAMA"}
+boys_2={"KOKO","TATA","CHOCHO"}
+boys_1 | boys_2
+{'CHOCHO', 'DADA', 'KOKO', 'MAMA', 'TATA'}
+
+boys_1={"TATA"}
+boys_2={"KOKO","TATA","CHOCHO"}
+boys_1.issubset(boys_2)
+True
+
+boys_1={"TATA","DADA","MAMA"}
+boys_2={"KOKO","TATA","CHOCHO"}
+boys_1 - boys_2
+{'DADA', 'MAMA'}
+# we dont do addition "for" sets
+
+boys_1={"TATA","DADA","MAMA"}
+boys_2={"KOKO","TATA","CHOCHO"}
+boys_1.union(boys_2)
+{'CHOCHO', 'DADA', 'KOKO', 'MAMA', 'TATA'}
+
+school={"name":"FICMinhas","location":"kamra","students":"250"}
+students = school["students"]
+print(students)
+250
+
+school={"name":"FICMinhas","location":"kamra","students":"250"}
+school["country"]="Pakistan"
+del school["country"]
+if "country" in school:
+  print("yes")
+else:
+  print("no")
+print(school)
+no
+{'name': 'FICMinhas', 'location': 'kamra', 'students': '250'}
+
+school={"name":"FICMinhas","location":"kamra","students":"250"}
+school["country"]="Pakistan"
+del school["country"]
+keys_list= list(school.keys())
+print(keys_list)
+values_list=list(school.values())
+print(values_list)
+items_list=list(school.items())
+print(items_list)
+['name', 'location', 'students']
+['FICMinhas', 'kamra', '250']
+[('name', 'FICMinhas'), ('location', 'kamra'), ('students', '250')]
+
+age = 18
+if age > 18:
+  print("go to ACDC")
+elif age==18:
+  print("go to venzuela")
+else:
+  print("move to baltimore")
+print("im moving on")
+go to venzuela
+im moving on
+
+user_choice= "Withdraw Cash"
+if user_choice == "Withdraw Cash":
+    amount = int(input("Enter the amount to withdraw: "))
+    if amount % 10 == 0:
+        print("Amount dispensed: ", amount)
+    else:
+        print("Please enter a multiple of 10.")
+else:
+    print("Thank you for using the ATM.")
+Enter the amount to withdraw: 56
+Please enter a multiple of 10.
+
+student_choice="select exam"
+if student_choice == "select exam":
+  exam = int(input("your exam id:"))
+  if exam != 56:
+    print("please type correct id")
+  else:
+    print("your exam will start soon")
+else:
+  print("if you need to update id click link at bottom of the page")
+
+student_choice="select exam"
+if student_choice == "select exam":
+  exam = int(input("your exam id:"))
+  if exam != 56:
+    print("please type correct id")
+  else:
+    print("your exam will start soon")
+else:
+  print("if you need to update id click link at bottom of the page")
+your exam id:56
+your exam will start soon
+
+student_id=input("enter your id:")
+student_password=input("enter your password:")
+
+if student_id == 45 and student_password == 56:
+  print("welcome to exam portal")
+print("kidnly check one of id or password!")
+enter your id:45
+enter your password:45
+kidnly check one of id or password!
+
+squares = ["red","green","blue","yellow"]
+for square in squares:
+  print(square)
+red
+green
+blue
+yellow
+
+squares = ["red","green","blue","yellow"]
+for square in squares:
+  print(square)
+red
+green
+blue
+yellow
+
+squares = ["red","green","blue","yellow"]
+for i,square in enumerate(squares):
+  print(i)
+0
+1
+2
+3
+
+squares=["red","red","red","yellow"]
+new_squares=[]
+i=0
+while(squares[i]=="red"):
+  new_squares.append(squares[i])
+  i=i+1
+print(new_squares)
+['red', 'red', 'red']
+
+students_in_first_round=["azam","talha","amh","tufail"]
+students_in_final_round=[]
+i=0
+while(students_in_first_round[i]=="azam"):
+  students_in_final_round.append(students_in_first_round[i])
+  i=i+1
+print(students_in_final_round)
+#azam qualified for final round! so i incldued it in final list :)
+['azam']
+
+coins=["euro","usd","pkr"]
+for i,coin in enumerate(coins):
+  print(f"{coin} is at position {i}")
+euro is at position 0
+usd is at position 1
+pkr is at position 2
+
+def Nowork():
+  pass
+print(Nowork())
+None
+
+def Artistnames(*names):
+  for name in names:
+    print(name)
+Artistnames("azam","talha","amh","tufail")
+Artistnames(("azam","talha"),"koko")
+azam
+talha
+amh
+tufail
+('azam', 'talha')
+koko
+
+x = 10
+
+def f():
+    global x
+    x=x+1
+    return x
+print(x)
+10
+
+x = 10
+
+def f():
+    x = 50
+    return x
+print(f())
+50
+
+weight=int(input("whats your weight in kgs: "))
+def make_boy_smart(weight):
+  if weight == 40:
+    print("boy is smart")
+  elif weight >40:
+    print("you're fat")
+  else:
+    print("you're clavicle boy")
+
+make_boy_smart(weight)
+print("thats fun lol dont take serious!")
+whats your weight in kgs: 50
+you're fat
+thats fun lol dont take serious!
+
+def make_boy_smart(weight):
+  if weight == 40:
+    print("boy is smart")
+  elif weight >40:
+    print("you're fat")
+  else:
+    print("you're clavicle boy")
+
+make_boy_smart(40)
+print("thats fun lol dont take serious!")
+boy is smart
+thats fun lol dont take serious!
+
+try:
+    x = int(input("Enter a number: "))
+    print(10 / x)
+except:
+    print("Something went wrong")
+Enter a number: 0
+Something went wrong
+
+
+try:
+  x=int(input("enter you student id: "))
+  print(10/x)
+except:
+  print("some error with your id, check it please")
+else:
+  print("welcome to exam portal")
+finally:
+  print("your exam has ended and so portal is closed for multiple attempts")
+enter you student id: 0
+some error with your id, check it please
+your exam has ended and so portal is closed for multiple attempts
+
+class Circle(object):
+  def __init__(self,radius,color):
+    self.radius=radius
+    self.color=color 
+  def area(self):
+    return 3.14*self.radius*self.radius
+  def add_radius(self,value):
+     self.radius= self.radius+value
+c1=Circle(12,"red")
+c2=Circle(10,"green")
+c1.add_radius(23)
+c1.area()
+[71]
+0s
+class Circle(object):
+  def __init__(self,radius,color):
+    self.radius=radius
+    self.color=color 
+  def area(self):
+    return 3.14*self.radius*self.radius
+  def add_radius(self,value):
+     self.radius= self.radius+value
+c1=Circle(12,"red")
+c2=Circle(10,"green")
+3846.5
+
+a=[10,9,9]
+b=[9,6,7]
+sum(a+b)
+#sum "in" python isnt "for" non iterable objects !
+
+

@@ -1,0 +1,141 @@
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.index=["a","b","c"]
+print(df)
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.index=["a","b","c"]
+df["name"]
+df["location"]
+df["age"]
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.index=["a","b","c"]
+df[["name","location"]]
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.index=["a","b","c"]
+df.loc["a"]
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.index=["a","b","c"]
+df.iloc[1]
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+print(df)
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.index=["a","b","c"]
+df.loc[["a"]]
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.index=["a","b","c"]
+df.iloc[1]
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.loc[1]
+#loc is for labels
+#iloc for indexes!
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.iloc[1,2]
+#loc is for labels
+#iloc for indexes!
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":["19","20","21"]})
+df.loc[1:2]
+#loc is for labels
+#iloc for indexes!
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":[19,20,21]})
+df["age"] + 1
+df["salary"]=[50000,60000,100000]
+print(df["salary"])
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":[19,20,21]})
+df["age"] + 1
+df[df["age"]>20]
+
+df[(df["age"]>20) & (df["location"]=="peshawar")]
+
+import pandas as pd
+df = pd.DataFrame({"name":["asim","talha","karas"],"location":["karachi","islamabad","peshawar"],"age":[19,20,21]})
+df.dropna()
+
+import numpy as np
+import matplotlib.pyplot as plt
+x=np.linspace(0,5,3)
+y=np.sin(x)
+%matplotlib inline
+plt.plot(x,y)
+plt.show()
+
+!pip install pycoingecko
+from pycoingecko import CoinGeckoAPI
+cg = CoinGeckoAPI()
+btc = cg.get_price(ids='bitcoin',vs_currencies='usd')
+print(btc)
+
+import pandas as pd
+
+df = pd.DataFrame(history['prices'],
+                  columns=['timestamp', 'price'])
+
+df.head()
+
+import matplotlib.pyplot as plt
+
+df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
+
+plt.plot(df['timestamp'], df['price'])
+plt.show()
+
+!pip install pycoingecko
+from pycoingecko import CoinGeckoAPI
+cg=CoinGeckoAPI()
+cg.get_price(ids="bitcoin",vs_currencies="usd")
+
+history = cg.get_coin_market_chart_by_id(
+    id='bitcoin',
+    vs_currency='usd',
+    days=3
+)
+
+import pandas as pd
+df = pd.DataFrame(history['prices'],
+                  columns=['timestamp', 'price'])
+
+df.head()
+
+df["timestamp"]
+
+df[["timestamp","price"]]
+
+df[["timestamp","price"]]*10
+
+df["timestamp"]=pd.to_datetime(df["timestamp"],unit="ms")
+df["timestamp"]
+
+import requests as rq
+url='https://www.ibm.com/'
+r=rq.get(url)
+r.status_code==200
+r.request.headers
+header=r.headers
+header["Date"]
+header["Content-type"]
+r.encoding
+r.text[0:100]
+
